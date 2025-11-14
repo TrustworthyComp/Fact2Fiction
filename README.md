@@ -1,4 +1,4 @@
-# [AAAI-2026] Fact2Fiction: Targeted Poisoning Attack to Agentic Fact-Checking Systems
+# [AAAI-2026] Fact2Fiction: Targeted Poisoning Attack to Agentic Fact-Checking Systems 😈
 
 [![arXiv](https://img.shields.io/badge/arXiv-2508.06059-B31B1B.svg)](https://arxiv.org/abs/2508.06059)
 [![GitHub](https://img.shields.io/badge/GitHub-Fact2Fiction-181717.svg)](https://github.com/TrustworthyComp/Fact2Fiction)
