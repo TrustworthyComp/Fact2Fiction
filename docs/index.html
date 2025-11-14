@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Fact2Fiction: Targeted Poisoning Attack to Agentic Fact-checking System at AAAI 2026">
+  <meta name="keywords" content="Fact2Fiction, Fact-checking, Poisoning Attack, Security, LLM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fact2Fiction: Targeted Poisoning Attack to Agentic Fact-checking System</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Fact2Fiction: Targeted Poisoning Attack to Agentic Fact-checking System</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://harryhe11.github.io/">Haorui He</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://imd.hkbu.edu.hk/faculty-member/Prof-Yupeng-LI.html">Yupeng Li</a><sup>1,*</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.microsoft.com/en-us/research/people/binzhu/">Bin Benjamin Zhu</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://changywen.github.io/">Dacheng Wen</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.reynold.hku.hk/">Reynold Cheng</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://i.cs.hku.hk/~fcmlau/">Francis C. M. Lau</a><sup>2</sup>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Department of Interactive Media, Hong Kong Baptist University</span><br>
+            <span class="author-block"><sup>2</sup>Department of Computer Science, The University of Hong Kong</span><br>
+            <span class="author-block"><sup>3</sup>Microsoft Corporation</span><br>
+            <span class="author-block"><sup>*</sup>Correspondence: <a href="mailto:ivanypli@gmail.com">ivanypli@gmail.com</a></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/TrustworthyComp/Fact2Fiction"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Appendix Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2508.06059"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Fact2Fiction</span> is the first poisoning attack framework targeting agentic fact-checking systems. It mirrors the decomposition strategy and exploits system-generated justifications to craft tailored malicious evidences that compromise sub-claim verification.
+      </h2>
+      <div class="has-text-centered">
+        <!-- Note: Please convert figs/attack_figs_new.pdf to PNG format and place it as ./static/images/attack_figs_new.png -->
+        <img src="./static/images/attack_figs_new.png" class="teaser-image" alt="Fact2Fiction Attack Framework Overview." style="max-width: 100%; height: auto;"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          State-of-the-art fact-checking systems combat misinformation at scale by employing autonomous LLM-based agents to decompose complex claims into smaller sub-claims, verify each sub-claim individually, and aggregate the partial results to produce verdicts with justifications (explanatory rationales for the verdicts).
+          The security of these systems is crucial, as compromised fact-checkers, which tend to be easily underexplored, can amplify misinformation.
+          </p>
+          <p>
+          This work introduces <span class="dnerf">Fact2Fiction</span>, the first poisoning attack framework targeting such agentic fact-checking systems.
+          Fact2Fiction mirrors the decomposition strategy and exploits system-generated justifications to craft tailored malicious evidences that compromise sub-claim verification.
+          Extensive experiments demonstrate that Fact2Fiction achieves 8.9%--21.2% higher attack success rates than state-of-the-art attacks across various poisoning budgets. Fact2Fiction exposes security weaknesses in current fact-checking systems and highlights the need for defensive countermeasures.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Key Contributions</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <ul>
+            <li><strong>Threat Model</strong>: We propose a novel threat model against fact-checking systems that exploits their justifications for targeted poisoning attacks.</li>
+            <li><strong>Attack Method</strong>: We introduce Fact2Fiction, the first attack framework that targets SOTA agentic fact-checking systems and crafts targeted malicious evidences.</li>
+            <li><strong>Evaluations and Findings</strong>: Extensive experiments show that Fact2Fiction outperforms prior attacks across diverse settings and reveal critical insights based on the findings.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Experimental Results</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+          Fact2Fiction consistently outperforms all baseline attacks across all poisoning rates on all victim systems (DEFAME, InFact, and Simple).
+          Notably, at a 1% poisoning rate, Fact2Fiction achieves an ASR of 42.4% on DEFAME and 46.0% on InFact, which surpasses PoisonedRAG by 8.9% and 9.2%, respectively.
+          </p>
+          <p>
+          Our evaluations reveal these critical insights:
+          </p>
+          <ol>
+            <li>Justifications introduce a transparency-security trade-off, yielding up to a 12.4% improvement in ASR under constrained budgets.</li>
+            <li>Evidence quality matters beyond retrievability. Malicious evidences crafted by Fact2Fiction achieve an 8.9% higher ASR than PoisonedRAG at the same level of retrievability.</li>
+            <li>Different attacks exhibit varying saturation points for attack effectiveness, beyond which additional poisoning budgets yield minimal improvements in ASR, across different victim systems.</li>
+            <li>Current defenses are ineffective against Fact2Fiction, which highlights the urgent need for novel countermeasures.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{fact2fiction2026,
+  title={Fact2Fiction: Targeted Poisoning Attack to Agentic Fact-checking System},
+  author={He, Haorui and Li, Yupeng and Zhu, Bin Benjamin and Wen, Dacheng and Cheng, Reynold and Lau, Francis C. M.},
+  booktitle={Proc.~of AAAI},
+  year={2026},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
